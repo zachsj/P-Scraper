@@ -4,18 +4,18 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 // Import the ProgressBar component from react-bootstrap correctly
-import ProgressBar from 'react-bootstrap/ProgressBar';
+//import ProgressBar from 'react-bootstrap/ProgressBar';
 
 
 const RunScraperButton = () => {
   const router = useRouter();
-  const [progress, setProgress] = useState(0);
-  const [isScraping, setIsScraping] = useState(false);
+  //const [progress, setProgress] = useState(0);
+  //const [isScraping, setIsScraping] = useState(false);
 
 
   const handleClick = async () => {
-    setIsScraping(true);
-    setProgress(0);
+    //setIsScraping(true);
+    //setProgress(0);
     //router.refresh();
     router.push(`/?runScraperButton=${true}`);
     setTimeout(() => {
@@ -28,7 +28,7 @@ const RunScraperButton = () => {
 
   // Simulating progress update
   // Replace this with your actual scraping logic that updates the progress
-  const simulateProgressUpdate = () => {
+  /*const simulateProgressUpdate = () => {
     const interval = setInterval(() => {
       setProgress((prevProgress) => {
         const newProgress = prevProgress + 5;
@@ -48,7 +48,7 @@ const RunScraperButton = () => {
     if (isScraping) {
       simulateProgressUpdate();
     }
-  }, [isScraping]);
+  }, [isScraping]);*/
 
   return (
     <div>
@@ -58,11 +58,11 @@ const RunScraperButton = () => {
           <p style={{ marginTop: '5px' }}>https://books.toscrape.com</p>
         </button>
       </div>
-      {isScraping && (
+     {/* {isScraping && (
         <div className="mt-3">
-          <ProgressBar animated now={progress} label={`${progress}%`} />
+     <ProgressBar animated now={progress} label={`${progress}%`} />
         </div>
-      )}
+      )} */}
     </div>
   );
 };
