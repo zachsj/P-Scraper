@@ -63,10 +63,10 @@ const runScraper = async () => {
   const page = await browser.newPage();
 
   //set browser viewport
-  await page.setViewport({
+  /*await page.setViewport({
   width: 1300,
   height: 600
-})
+})*/
 
 //go to url
 const endpoint = 'https://books.toscrape.com';
