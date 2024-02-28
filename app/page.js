@@ -17,7 +17,6 @@ const streamifier = require('streamifier');
 
 require('dotenv').config()
 
-try {
 
 cloudinary.config({ 
   cloud_name: 'do5l7hms7', 
@@ -53,7 +52,6 @@ export default function Home({ searchParams }) {
 const runScraper = async () => {
  
   //launch puppeteer browser
-  try {
   const browser = await puppeteer.launch({
     headless:true,
     'args' : [
@@ -104,10 +102,7 @@ await wait(1000);
 
 //close browser
 await browser.close();
-}
-catch(e) {
-  console.log('Something bad happened')
-}
+
 //createExcel();
   
 //wait 2 seconds
@@ -255,6 +250,3 @@ const scrapeData = async (page) => {
 });
 };
 
-} catch(error) {
-  console.log("Error here:", e.message)
-}
