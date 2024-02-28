@@ -52,6 +52,7 @@ export default function Home({ searchParams }) {
 const runScraper = async () => {
  
   //launch puppeteer browser
+  try {
   const browser = await puppeteer.launch({
     headless:true,
     'args' : [
@@ -102,7 +103,10 @@ await wait(1000);
 
 //close browser
 await browser.close();
-
+}
+catch(e) {
+  console.log('Some bad happened')
+}
 //createExcel();
   
 //wait 2 seconds
