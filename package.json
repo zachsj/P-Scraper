@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "heroku-postbuild": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache",
     "start": "next start",
     "lint": "next lint"
   },
