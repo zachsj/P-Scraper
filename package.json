@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "heroku-postbuild": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "react-scripts start",
+"start": "serve -s build",
+"build": "react-scripts build",
+"test": "react-scripts test --env=jsdom",
+"eject": "react-scripts eject",
+"heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
@@ -19,6 +20,7 @@
     "nodemon": "^3.1.0",
     "puppeteer": "^22.3.0",
     "react-bootstrap": "^2.10.1",
+    "serve": "^14.2.1",
     "streamifier": "^0.1.1",
     "xlsx": "^0.18.5"
   },
