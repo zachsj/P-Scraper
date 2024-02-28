@@ -17,6 +17,7 @@ const streamifier = require('streamifier');
 
 require('dotenv').config()
 
+try {
 
 cloudinary.config({ 
   cloud_name: 'do5l7hms7', 
@@ -105,7 +106,7 @@ await wait(1000);
 await browser.close();
 }
 catch(e) {
-  console.log('Some bad happened')
+  console.log('Something bad happened')
 }
 //createExcel();
   
@@ -254,3 +255,6 @@ const scrapeData = async (page) => {
 });
 };
 
+} catch(error) {
+  console.log("Error here:", e.message)
+}
