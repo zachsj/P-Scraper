@@ -5,11 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "heroku-postbuild": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3",
     "cheerio": "^1.0.0-rc.12",
     "cloudinary": "^2.0.1",
     "dotenv": "^16.4.5",
@@ -18,10 +18,7 @@
     "next": "^14.1.0",
     "nodemon": "^3.1.0",
     "puppeteer": "^22.3.0",
-    "react": "^18",
     "react-bootstrap": "^2.10.1",
-    "react-dom": "^18",
-    "react-router-dom": "^6.22.1",
     "streamifier": "^0.1.1",
     "xlsx": "^0.18.5"
   },
@@ -33,6 +30,6 @@
     "tailwindcss": "^3.4.1"
   },
   "engines": {
-    "node": "20.11" 
+    "node": "20.11"
   }
 }
