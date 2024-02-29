@@ -228,7 +228,7 @@ const scrapeData = async (page) => {
   const stream = streamifier.createReadStream(buffer);
 
   // Upload the stream to Cloudinary
-  const uploadStream = cloudinary.uploader.upload_stream(
+  const uploadStream = cloudinary.uploader.unsigned_upload_stream(
       {
         resource_type: 'raw',
         format: 'xlsx',  // Specify the desired format as XLSX
