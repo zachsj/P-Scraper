@@ -17,14 +17,6 @@ const streamifier = require('streamifier');
 
 require('dotenv').config()
 
-
-cloudinary.config({ 
-  cloud_name: 'do5l7hms7', 
-  api_key: process.env.CLOUDINARY_API_KEY, 
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-  secure: true  
-  });
-
 let counter = 0;
 
 //books array
@@ -201,6 +193,13 @@ const scrapeData = async (page) => {
 //upload To Cloudinary 
   const uploadToCloudinary = (booksArr) => {
   return new Promise((resolve, reject) => {
+
+    cloudinary.config({ 
+      cloud_name: 'do5l7hms7', 
+      api_key: process.env.CLOUDINARY_API_KEY, 
+      api_secret: process.env.CLOUDINARY_API_SECRET,
+      secure: true  
+      });
     
     // Create a new workbook
   const workbook = new ExcelJS.Workbook();
